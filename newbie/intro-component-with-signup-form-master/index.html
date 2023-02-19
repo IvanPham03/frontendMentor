@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <p class="title">Learn to code by watching others</p>
+        <p class="desc">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="func">
+        <button class="func-try">
+          <b>Try it free 7 days</b> then $20/mo. thereafter
+        </button>
+        <div class="func-form">
+          <form class="input" novalidate>
+            <input type="text" placeholder="First name" id="firstname"/>
+            <p class="text-error" id="error-first"></p>
+            <input type="text" placeholder="Last name" id="lastname"/>
+            <p class="text-error" id="error-last"></p>
+            <input type="email" placeholder="Email address" id="email"/>
+            <p class="text-error" id="error-email"></p>
+            <input type="password" placeholder="Password" id="password"/>
+            <p class="text-error" id="error-password"></p>
+            <button type="submit" id="submit">Claim your free trial</button>
+          </form>
+          <p class="term">
+            By clicking the button, you are agreeing to our
+            <a href="#">Terms and Services</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

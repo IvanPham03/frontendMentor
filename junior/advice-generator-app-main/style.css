@@ -1,0 +1,71 @@
+@import url("https://fonts.google.com/specimen/Manrope");
+
+:root {
+  --Light_Cyan: hsl(193, 38%, 86%);
+  --Neon_Green: hsl(150, 100%, 66%);
+  --Grayish_Blue: hsl(217, 19%, 38%);
+  --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+  --Dark_Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--Dark_Blue);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+.body {
+  background-color: var(--Dark_Grayish_Blue);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Manrope", sans-serif;
+}
+.content {
+  font-size: 24px;
+  color: var(--Light_Cyan);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.number {
+  color: var(--Neon_Green);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font: 600;
+}
+
+.btn-random button {
+  background-color: var(--Neon_Green);
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.btn-random {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -45px;
+}
+
+.btn-random button:hover {
+  box-shadow: 2px 2px 40px var(--Neon_Green);
+  cursor: pointer;
+}
+.line {
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .body {
+    margin: 15% 0;
+  }
+  .btn-random {
+    top: -90px;
+  }
+}

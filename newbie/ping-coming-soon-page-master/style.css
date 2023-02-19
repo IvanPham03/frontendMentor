@@ -1,0 +1,172 @@
+@import url('https://fonts.google.com/specimen/Libre+Franklin');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale_Blue: hsl(223, 100%, 88%);
+    --Light_Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very_Dark_Blue: hsl(209, 33%, 12%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container {
+    margin-top: 30px;
+    width: 500px;
+}
+
+.header img {
+    width: 15%;
+}
+
+.header {
+    margin: 10px 0;
+}
+
+.title {
+    color: var(--Gray);
+    font-weight: 300;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.title b {
+    color: var(--Very_Dark_Blue);
+}
+
+.subs {
+    color: var(--Very_Dark_Blue);
+    font-weight: 300;
+}
+
+.formNo {
+    padding: 70px 0;
+    display: flex;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.formNo__input {
+    width: 70%;
+}
+
+.formNo input {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 25px;
+    outline: none;
+    border: solid 1px var(--Pale_Blue);
+}
+
+.formNo input::placeholder {
+    color: var(--Pale_Blue);
+    font-size: 14px;
+}
+
+.formNo__button {
+    width: 25%;
+    height: 100%;
+}
+
+.formNo button {
+    background-color: var(--Blue);
+    padding: 10px;
+    color: #fff;
+    border-radius: 25px;
+    width: 100%;
+    padding: 13px;
+    outline: none;
+    border: none;
+    box-shadow: -1px 10px 20px var(--Pale_Blue);
+}
+
+.formNo button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.illustration {
+    display: block;
+    margin: 100px 0;
+}
+
+.illustration img {
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.icon div {
+    margin: 0 20px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: var(--Blue);
+    border: solid var(--Blue) 1px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+}
+.icon div:hover{
+    background-color: var(--Blue);
+    cursor: pointer;
+    color: #fff;
+}
+
+.copyright {
+    margin: 20px 0;
+    color: var(--Gray);
+}
+
+.error {
+    margin: 10px;
+    color: var(--Light_Red);
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 15px;
+    font-style: italic;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        padding: 10%;
+    }
+    .header {
+        margin: 0;
+    }
+    .formNo {
+        display: block;
+    }
+
+    .formNo__input,
+    .formNo__button {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .copyright{
+        padding-bottom: 2rem;
+    }
+}

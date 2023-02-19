@@ -1,0 +1,122 @@
+@import url('https://fonts.google.com/specimen/Outfit');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very_dark_blue_main: hsl(217, 54%, 11%);
+    --Very_dark_blue_card: hsl(216, 50%, 16%);
+    --Very_dark_blue_line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--Very_dark_blue_main);
+    color: var(--White);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    border-radius: 10px;
+    width: 350px;
+    padding: 20px;
+    background-color: var(--Very_dark_blue_card);
+}
+.content .equilibrium{
+    position: relative;
+    width: 100%;
+    height: 310px;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5px;
+}
+.content .equilibrium img {
+    object-fit: cover;    
+    width: 100%;
+    height: 300px;
+}
+
+.title {
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.desc {
+    color: var(--Soft_blue);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.value{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.price{
+    color: var(--Cyan);
+}
+.date {
+    line-height: 1rem;
+    height: 1rem;
+    display: flex;
+    align-self: center;
+    color: var(--Soft_blue);
+}
+.date img {
+    margin-right: 4px;
+}
+hr {
+    border-color: var(--Very_dark_blue_line);
+}
+.auth{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.auth img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.auth p{
+    color: var(--Soft_blue);
+}
+.name{
+    color: var(--White);
+}
+.equilibrium div:hover:after{
+    opacity: 1;
+}
+.equilibrium div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 50%);
+    background-image: url(/images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    z-index: 1000;
+    width: inherit;
+    height: inherit;
+    border-radius: 5px;
+  }

@@ -1,0 +1,125 @@
+@import url('https://fonts.google.com/specimen/Karla');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright_Yellow: hsl(71, 73%, 54%);
+    --Light_Gray: hsl(204, 43%, 93%);
+    --Grayish_Blue: hsl(218, 22%, 67%);
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Light_Gray);
+    letter-spacing: 1px;
+}
+.container{
+    width: 600px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    box-shadow: 2px 5px 30px var(--Grayish_Blue);
+    border-radius: 10px;
+}
+
+.grid-1, .grid-2, .grid-3{
+    padding: 30px;
+}
+
+.grid-1{
+    grid-column: 1 / span 2;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+.grid-1 p:first-child{
+    color: var(--Cyan);
+}
+.grid-2 p:first-child, .grid-3 p:first-child{
+    color: var(--Light_Gray);
+}
+.grid-1 p:first-child, .grid-2 p:first-child, .grid-3 p:first-child{
+    font-weight: 700;
+    padding: 18px 0;
+    font-size: 20px;
+}
+.grid-1 p:nth-child(2){
+    color: var(--Bright_Yellow);
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.grid-1 p:last-child{
+    color: var(--Grayish_Blue);
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+.grid-2{
+    background-color: var(--Cyan);
+    color: #e2e8ec;
+    border-bottom-left-radius: 10px;
+}
+.grid-2 p:first-child, .grid-3 p:first-child{
+    font-size: 18px;
+}
+.grid-2 p:nth-child(2){
+    font-size: 24px;
+    display: flex;  
+    align-self: center;
+    font-weight: 700;
+}
+.grid-2 p:nth-child(2) span{
+    padding-left: 10px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    align-items: center;
+    color: #e2e8ec;
+}
+.grid-2 p:nth-child(3){
+    font-weight: 400;
+    font-size: 15px;
+    padding: 20px 0;
+}
+.grid-2 button{
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: var(--Bright_Yellow);
+    color:#fff;
+    box-shadow: 1px 10px 10px hsl(179, 64%, 30%);
+}
+.grid-3 p:last-child{
+    color: #e2e8ec;
+}
+.grid-3{
+    border-bottom-right-radius: 10px;
+    background-color: hsl(179, 62%, 50%);
+}
+@media screen and (max-width: 800px) {
+    .container{
+        display: block;
+        width: 70vw;
+        margin: 80px 0;
+    }
+    .grid-2{
+        border-radius: 0;
+    }
+    .grid-3{
+        border-bottom-left-radius: 10px;
+    }
+}

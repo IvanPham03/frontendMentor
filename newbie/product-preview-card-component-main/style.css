@@ -1,0 +1,121 @@
+@import url('https://fonts.google.com/specimen/Montserrat');
+@import url('https://fonts.google.com/specimen/Fraunces');
+
+body {
+    background-color: #f4eae3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Fraunces', san-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 600px;
+    display: flex;
+}
+
+.img {
+    height: 400px;
+    width: 300px;
+    background: url('./images/image-product-desktop.jpg') center;
+    background-size: cover;
+    border-radius: 5px 0 0 5px;
+
+}
+
+.text {
+    border-radius: 0 5px 5px 0;
+    width: 300px;
+    height: 400px;
+    float: right;
+    background-color: #ffffff;
+}
+
+.text div {
+    margin: 30px 20px;
+}
+
+button {
+    background-color: #3d8269;
+    color: #ffffff;
+    padding: 8px 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+}f
+button:hover{
+    background-color: #235a46;
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h6 {
+    letter-spacing: 6px;
+    font-weight: 200;
+}
+
+.sub {
+    /* font-size: 12px; */
+    font-weight: 300;
+    color: rgb(117, 116, 116);
+    line-height: 1.2rem;
+}
+
+.priceDis {
+    color: #3d8269;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.price {
+    color: rgb(117, 116, 116);
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    .main {
+        margin: 50px 0;
+        width: 400px;
+        text-align: center;
+        flex-direction: column;
+        border-radius: 50px;
+    }
+
+    .img {
+        border-radius: 5px 5px 0 0;
+        background: url('./images/image-product-mobile.jpg') center no-repeat;
+        background-size: contain;
+        height: 280px;
+    }
+
+    .img,
+    .text {
+        width: 100%;
+    }
+
+    .text {
+        display: block;
+        padding-bottom: 20px;
+        float: none;
+        border-radius: 0 0 5px 5px;
+    }
+
+    h6 {
+        font-size: 20px;
+    }
+}

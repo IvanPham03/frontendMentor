@@ -1,0 +1,131 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+:root {
+    /* ### Primary */
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* ### Neutral */
+
+    --Very_Dark_Blue: hsl(234, 12%, 34%);
+    --Grayish_Blue: hsl(229, 6%, 66%);
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very_Light_Gray);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    line-height: 3.5rem;
+    text-align: center;
+    width: 30vw;
+    color: var(--Very_Dark_Blue);
+    padding: 50px 0;
+}
+
+.header h2 {
+    font-size: 24px;
+}
+
+.header h2:first-child {
+    font-weight: 200;
+}
+
+.header span {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.header p {
+    color: var(--Grayish_Blue);
+    font-weight: 200;
+    line-height: 1rem;
+}
+
+.content {
+    display: flex;
+    min-height: 50%;
+    align-items: center;
+}
+
+.box-item {
+    background-color: var(--Very_Light_Gray);
+    height: 12rem;
+    box-shadow: 0px 10px 10px 0px rgba(5, 8, 171, 0.1);
+    width: 20rem;
+    margin: 1rem;
+    border-radius: 2px;
+    padding: 20px;
+}
+
+.box-middle .box-item {
+    margin-bottom: 2rem;
+}
+
+.title {
+    padding: 5px 0;
+    margin-top: 2px;
+    font-size: 400;
+    font-size: 1.2rem;
+    color: var(--Very_Dark_Blue) !important;
+}
+
+.box-item p {
+    color: var(--Grayish_Blue);
+}
+
+.box-1 {
+    border-top: 4px solid var(--Cyan);
+}
+
+.box-2 {
+    border-top: 4px solid var(--Red);
+}
+
+.box-3 {
+    border-top: 4px solid var(--Orange);
+}
+
+.box-4 {
+    border-top: 4px solid var(--Blue);
+}
+
+.box-img {
+    margin-top: 1.5rem;
+    height: 3rem;
+    float: right;
+}
+
+@media screen and (max-width: 700px) {
+
+    .header{
+        width: 20rem;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .content {
+        flex-direction: column;
+    }
+}

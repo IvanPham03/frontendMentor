@@ -1,0 +1,140 @@
+@import url("https://fonts.google.com/specimen/DM+Sans");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft_red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark_brown: hsl(25, 47%, 15%);
+  --Medium_brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very_pale_orange: hsl(33, 100%, 98%);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 500px;
+}
+
+.container .card-title {
+  background-color: var(--Soft_red);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  color: #fff;
+  border-radius: 10px;
+  align-items: center;
+}
+.container .card-title > p {
+  font-weight: 300;
+}
+.container .card-title .price {
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* body */
+.card-body {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Very_pale_orange);
+}
+
+.card-body .duration-tittle {
+  font-size: 26px;
+}
+.card-body .chart {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  border-bottom: 1px solid var(--Cream);
+}
+.card-body .chart .column {
+  height: 150px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: var(--Soft_red);
+}
+.card-body .chart .column:hover {
+  filter: brightness(125%);
+}
+.chart div:hover .number {
+  visibility: visible;
+}
+.chart div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-body .chart .day {
+  color: var(--Medium_brown);
+  text-align: center;
+  padding: 5px 0;
+}
+.card-body .chart .number {
+  text-align: center;
+  padding: 2px 0;
+  background-color: var(--Dark_brown);
+  color: var(--Cream);
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  visibility: hidden;
+}
+/* bottom */
+
+.card-body .bottom {
+  padding: 20px 0;
+}
+.card-body .bottom > p {
+  color: var(--Medium_brown);
+}
+.card-body .bottom > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-body .bottom .price {
+  padding: 10px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+.card-body .bottom .percent {
+  text-align: right;
+  font-size: 20px;
+  padding: 4px 0;
+}
+.card-body .bottom .percent .percent-number {
+  font-weight: bold;
+}
+.card-body .bottom .percent p:last-child {
+  color: var(--Medium_brown);
+  font-size: 18px;
+  padding: 4px 0;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 400px;
+  }
+  .card-body .chart .column {
+    width: 40px;
+  }
+}

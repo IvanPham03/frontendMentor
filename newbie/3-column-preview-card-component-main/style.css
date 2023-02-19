@@ -1,0 +1,95 @@
+@import url('https://fonts.google.com/specimen/Big+Shoulders+Display');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+:root {
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+}
+
+.container {
+    display: flex;
+}
+
+.general {
+    padding: 4em;
+    min-height: 100vh;
+
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2em 0;
+    font-size: 2em;
+}
+
+.desc {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+
+.sedan {
+    background-color: var(--Bright_orange);
+}
+
+.sedan button {
+    color: var(--Bright_orange);
+
+}
+
+.suvs {
+    background-color: var(--Dark_cyan);
+}
+
+.suvs button {
+    color: var(--Dark_cyan);
+}
+
+.luxury {
+    background-color: var(--Very_dark_cyan);
+}
+
+.luxury button {
+    color: var(--Very_dark_cyan);
+}
+
+button {
+    padding: 1rem 5rem;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    bottom: 0;
+    font-size: 1.2rem;
+    background-color: #fff;
+    margin-top: 50%;
+    font-weight: 500;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+@media screen and (max-width: 1000px) {
+    .container{
+        flex-direction: column;
+    }
+}

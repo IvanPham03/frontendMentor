@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="./images/logo.svg" alt="logo" class="logo" />
+      </div>
+      <p class="title">We are launching <b>soon!</b></p>
+      <p class="subs">Subscribe and get notified</p>
+      <div class="formNo">
+        <div class="formNo__input">
+          <input type="text" placeholder="Your email address..." id="email"/>
+          <p class="error" id="error">Please provided a valid email</p>
+        </div>
+        <div class="formNo__button">
+          <button id="btn">Notify Me</button>
+        </div>
+      </div>
+      <div class="illustration">
+        <img src="./images/illustration-dashboard.png" alt="illustration" />
+      </div>
+      <div class="icon">
+        <div><i class="fab fa-facebook-f"></i></div>
+        <div><i class="fab fa-twitter"></i></div>
+        <div><i class="fab fa-instagram"></i></div>
+      </div>
+    </div>
+    <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
+  </body>
+  <script src="./script.js"></script>
+</html>

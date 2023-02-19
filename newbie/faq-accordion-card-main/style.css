@@ -1,0 +1,130 @@
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very_dark_desaturated_blue: hsl(238, 29%, 16%);
+    --Soft_red: hsl(14, 88%, 65%);
+    --Soft_violet: hsl(273, 75%, 66%);
+    --Soft_blue: hsl(240, 73%, 65%);
+    --Very_dark_grayish_blue: hsl(237, 12%, 33%);
+    --Dark_grayish_blue: hsl(240, 6%, 50%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(var(--Soft_violet), var(--Soft_blue));
+    min-height: 100vh;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 30px;
+    display: flex;
+    width: 70vw;
+    height: 70vh;
+    background-color: #fff;
+}
+
+.hero {
+    width: 40%;
+    padding: 0 100px;
+    margin-right: 50px;
+    background: url("images/illustration-woman-online-desktop.svg") no-repeat 100% 45%, url("images/bg-pattern-desktop.svg") no-repeat 100% 72%;
+}
+
+.img-box {
+    left: 8.5%;
+    position: absolute;
+    top: 41.5%;
+}
+.question {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 50px;
+    width: 50%;
+}
+
+.content h1 {
+    padding: 20px 0;
+    color: var(--Very_dark_grayish_blue);
+}
+
+.ques div {
+    padding: 1rem 0;
+    position: relative;
+    color: var(--Very_dark_grayish_blue);
+
+}
+
+.ques:hover div:first-child{
+    cursor: pointer;
+    color: var(--Soft_red);
+}
+.ques div:first-child span {
+    content: url('./images/icon-arrow-down.svg');
+    position: absolute;
+    right: 0;
+    pointer-events:none;
+    transition: transform .5s ease-in-out;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.ans {
+    padding-bottom: 1rem;
+    display: none;
+    color: var(--Very_dark_grayish_blue);
+}
+
+.ans-show {
+    
+    display: block !important;
+}
+.rotateArrow{
+    transform: rotate(3.142rad) !important;
+}
+
+@media screen and (max-width:700px) {
+    .container{
+        margin-top: 50px;
+        display: block;
+        height: auto;
+    }
+    .hero {
+        width: 100%;
+        padding: 100px; 
+        background:url("images/bg-pattern-mobile.svg") no-repeat 50% 0%;
+    }
+    .hero::after{
+        position: absolute;
+        content: "";
+        align-self: center;
+        top: 20px;
+        left: 130px;
+        width: 234px;
+        height: 170px;
+        background: no-repeat top 0 left 50%
+          url(../images/illustration-woman-online-mobile.svg);
+    }
+    .content {
+        overflow: scroll;
+        padding: 10px;
+        overflow: auto;
+        width: 100%;
+    }
+    .img-box {
+        display: none;
+    }
+}
